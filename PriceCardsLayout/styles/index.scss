@@ -1,0 +1,89 @@
+@import "variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+  background-color: $main-color;
+  color: $text-color;
+}
+
+main {
+  height: 100vh;
+
+  & .price-card {
+    position: absolute;
+    width: 380px;
+    height: 770px;
+    background-color: $card-color;
+    top: 115px;
+    left: 132px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      margin: 33px auto;
+
+      & h1 {
+        font-size: 35px;
+        margin: auto;
+      }
+
+      & span {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 24.38px;
+        margin: auto;
+      }
+    }
+
+    &__price {
+      height: 105px;
+      background-color: $basic-price-color;
+      display: flex;
+
+      & span {
+        margin: auto;
+        font-size: 55px;
+        font-weight: 700;
+      }
+    }
+
+    &__description {
+      font-size: 15px;
+      font-weight: 300;
+      text-align: center;
+      margin: 40px 26px;
+    }
+
+    &__option-list {
+      font-size: 15px;
+      font-weight: 300;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      & li {
+        height: 50px;
+        line-height: 50px;
+      }
+      & li:nth-child(odd) {
+        background-color: $list-bg-color;
+      }
+    }
+
+    &__order-btn {
+      height: 40px;
+      width: 155px;
+      margin: auto;
+      color: $text-color;
+      background-color: $basic-price-color;
+      border: none;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+  }
+}
